@@ -21,24 +21,12 @@
                 </div>
                 <div>
                     <div class="mb-1 font-semibold">Experience</div>
-                    <label for="experience" class="mb-1 flex items-center">
-                        <input type="radio" name="experience" value="" id="experience" class="mr-1" @checked(!request('experience'))/>
-                        <span class="ml- text-sm">All</span>
-                    </label>
-                    <label for="experience" class="mb-1 flex items-center">
-                        <input type="radio" name="experience" value="entry" id="experience" class="mr-1" @checked('entry'=== request('experience'))/>
-                        <span class="ml- text-sm">Entry</span>
-                    </label>
-                    <label for="experience" class="mb-1 flex items-center">
-                        <input type="radio" name="experience" value="intermediate" id="experience" class="mr-1" @checked('intermediate'=== request('experience'))/>
-                        <span class="ml- text-sm">Intermediate</span>
-                    </label>
-                    <label for="experience" class="mb-1 flex items-center">
-                        <input type="radio" name="experience" value="senior" id="experience" class="mr-1" @checked('senior'=== request('experience'))/>
-                        <span class="ml- text-sm">Senior</span>
-                    </label>
+                    <x-radio-group name="experience" :options="\App\Models\Job::$experience"/>
                 </div>
-                <div>4</div>
+                <div>
+                    <div class="mb-1 font-semibold">Category</div>
+                    <x-radio-group name="category" :options="\App\Models\Job::$category"/>
+                </div>
             </div>
             <button type="submit" class="w-full bg-blue-500 text-white rounded-md py-1.5">
                 Filter
