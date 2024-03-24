@@ -28,7 +28,7 @@
                     <x-radio-group name="category" :options="\App\Models\Job::$category"/>
                 </div>
             </div>
-            <button type="submit" class="w-full bg-blue-500 text-white rounded-md py-1.5">
+            <button type="submit" class="w-full bg-blue-500 hover:bg-blue-400 hover:text-slate-200 text-white text-sm font-semibold rounded-md py-1.5">
                 Filter
             </button>
         </form>
